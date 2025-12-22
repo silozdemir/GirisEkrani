@@ -20,7 +20,6 @@ public class GirisEkrani {
         jf.add(new JLabel(" Şifre:")); jf.add(textSifre);
         jf.add(butonGiris); jf.add(butonKaydol);
 
-        // KAYDOLMA
         butonKaydol.addActionListener(e -> {
             String ad = textKullanici.getText();
             String sifre = new String(textSifre.getPassword());
@@ -30,7 +29,7 @@ public class GirisEkrani {
             }
         });
 
-        // GİRİŞ YAPMA
+        
         butonGiris.addActionListener(e -> {
             if (girisKontrol(textKullanici.getText(), new String(textSifre.getPassword()))) {
                 JOptionPane.showMessageDialog(null, "Hoşgeldiniz!");
@@ -71,5 +70,6 @@ class User {
         this.sifre = sifre;
     }
 }
+
 
 
